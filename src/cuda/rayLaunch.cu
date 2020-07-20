@@ -1,6 +1,4 @@
 #include "CUDA.hpp"
-
-#include "randomGenorater.hpp"
 #include "MathFunction.hpp"
 
 //------------------------------------------------------------------------------

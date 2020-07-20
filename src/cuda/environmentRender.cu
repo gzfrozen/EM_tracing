@@ -16,8 +16,6 @@
 
 #include "CUDA.hpp"
 
-#include "randomGenorater.hpp"
-
 //------------------------------------------------------------------------------
 // closest hit and anyhit programs for radiance-type rays.
 //
