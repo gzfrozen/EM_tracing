@@ -24,6 +24,7 @@
 extern "C" const unsigned char rayLaunch[];
 extern "C" const unsigned char environmentRender[];
 extern "C" const unsigned char phaseDetection[];
+extern "C" const unsigned char closestHit[];
 
 /*! SBT record for a raygen program */
 struct __align__(OPTIX_SBT_RECORD_ALIGNMENT) RaygenRecord
@@ -360,6 +361,7 @@ void SampleRenderer::createModule()
   static std::unordered_map<std::string, const unsigned char *> ptxCode;
   ptxCode["rayLaunch"] = rayLaunch;
   ptxCode["environmentRender"] = environmentRender;
+  ptxCode["closestHit"] = closestHit;
   // ptxCode["phaseDetection"] = phaseDetection;
 
   for (auto i : ptxCode)
@@ -462,7 +464,7 @@ void SampleRenderer::createHitgroupPrograms()
   OptixProgramGroupOptions pgOptions = {};
   OptixProgramGroupDesc pgDesc = {};
   pgDesc.kind = OPTIX_PROGRAM_GROUP_KIND_HITGROUP;
-  pgDesc.hitgroup.moduleCH = module["environmentRender"];
+  pgDesc.hitgroup.moduleCH = module["closestHit"];
   pgDesc.hitgroup.moduleAH = module["environmentRender"];
 
   // -------------------------------------------------------

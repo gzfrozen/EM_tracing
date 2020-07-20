@@ -47,7 +47,8 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/support/glfWindow EXCLUDE_FROM_ALL)
 add_library(CudaPTX OBJECT 
             ${EM_CUDA_DIR}/rayLaunch.cu
             ${EM_CUDA_DIR}/environmentRender.cu 
-            ${EM_CUDA_DIR}/phaseDetection.cu)
+            ${EM_CUDA_DIR}/phaseDetection.cu
+            ${EM_CUDA_DIR}/closestHit.cu)
 target_include_directories(CudaPTX PRIVATE ${EM_INCLUDE_DIR}
                            PRIVATE ${EM_CUDA_DIR})
 target_link_libraries(CudaPTX
