@@ -31,19 +31,19 @@
 # Our initial guess will be within the SDK.
 
 if (WIN32)
-#		set(OptiX_INSTALL_DIR "C:/ProgramData/NVIDIA Corporation/OptiX SDK 5.1.0" CACHE PATH "Path to OptiX installed location.")
+#		set(OptiX_INSTALL_DIR "D:/ProgramData/NVIDIA Corporation/OptiX SDK 5.1.0" CACHE PATH "Path to OptiX installed location.")
 	find_path(searched_OptiX_INSTALL_DIR
 		NAME include/optix.h
     PATHS
-    "C:/ProgramData/NVIDIA Corporation/OptiX SDK 7.1.0"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 7.0.0"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 6.5.0"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 6.0.0"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 5.1.1"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 5.1.0"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 5.0.1"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK 5.0.0"
-		"C:/ProgramData/NVIDIA Corporation/OptiX SDK *"
+    "D:/ProgramData/NVIDIA Corporation/OptiX SDK 7.1.0"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 7.0.0"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 6.5.0"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 6.0.0"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 5.1.1"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 5.1.0"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 5.0.1"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK 5.0.0"
+		"D:/ProgramData/NVIDIA Corporation/OptiX SDK *"
 	)
 	mark_as_advanced(searched_OptiX_INSTALL_DIR)
   set(OptiX_INSTALL_DIR ${searched_OptiX_INSTALL_DIR} CACHE PATH "Path to OptiX installed location.")
